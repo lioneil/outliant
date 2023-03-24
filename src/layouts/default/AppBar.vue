@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar absolute flat>
+  <v-app-bar flat>
     <v-container>
       <v-row class="px-4">
         <v-app-bar-title>
