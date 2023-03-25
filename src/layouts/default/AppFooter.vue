@@ -6,7 +6,7 @@
           <v-layout style="margin-top: -120px !important;">
             <v-spacer></v-spacer>
             <FakeImage
-              style="background-color: #c4c4c4; width: 400px; min-height: 400px;"
+            style="background-color: #c4c4c4; width: 400px; min-height: 400px;"
             ></FakeImage>
           </v-layout>
         </v-col>

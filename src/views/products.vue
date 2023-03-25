@@ -1,22 +1,25 @@
 <template>
   <v-container>
     <v-row class="mt-10">
-      <v-col cols="7">
-        <v-layout class="align-center mb-10">
-          <h1 class="text-h3 font-weight-bold">Products</h1>
-          <div class="mx-3"></div>
-          <v-text-field
-            v-model="query"
-            hide-details
-            placeholder="Search for keywords..."
-            variant="outlined"
-            @keyup="search(query)"
-          ></v-text-field>
-        </v-layout>
+      <v-col cols="12" lg="7">
+        <v-row>
+          <v-col cols="12" lg="6">
+            <h1 class="text-h3 font-weight-bold">Products</h1>
+          </v-col>
+          <v-col cols="12" lg="6">
+            <v-text-field
+              v-model="query"
+              hide-details
+              placeholder="Search for keywords..."
+              variant="outlined"
+              @keyup="search(query)"
+            ></v-text-field>
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="7">
+      <v-col cols="12" lg="7">
         <v-table class="table--bordered">
           <thead>
             <tr>
@@ -32,15 +35,17 @@
               <td>{{ item.name }}</td>
               <td class="text-right">{{ item.price }}</td>
               <td>
-                <v-btn flat size="small" class="ml-3" color="primary" @click="edit(item)">Edit</v-btn>
-                <v-btn flat size="small" class="ml-3" variant="outlined">Delete</v-btn>
+                <v-layout>
+                  <v-btn flat size="small" class="ml-3" color="primary" @click="edit(item)">Edit</v-btn>
+                  <v-btn flat size="small" class="ml-3" variant="outlined">Delete</v-btn>
+                </v-layout>
               </td>
             </tr>
           </tbody>
         </v-table>
 
       </v-col>
-      <v-col cols="5">
+      <v-col cols="12" lg="5">
         <form class="pa-8 bg-grey-lighten-3" @submit.prevent="submit(product)">
           <div class="text-center mb-10">
             <h2 class="font-weight-bold mb-6">Header Text</h2>
